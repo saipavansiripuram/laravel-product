@@ -1,4 +1,5 @@
 <?php
+
 use App\Providers\RouteServiceProvider;
 use App\Http\Controllers\ProductController;
 /*
@@ -21,15 +22,57 @@ use App\Http\Controllers\ProductController;
 //     return view("hello");
 // });
 
-Route::view('/','home');
+Route::view('/', 'home');
 
-Route::get("/products",[ProductController::class,'index'])
+Route::get("/products", [ProductController::class, 'index'])
     ->name('products.index');
 
-Auth::routes();
+Route::get("/products/create", [ProductController::class, 'create'])
+    ->name('products.create');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post("/products/store", [ProductController::class, 'store'])
+    ->name('products.store');
 
-Auth::routes();
+// Route::get("/products/{id}",[ProductController::class,'show'])
+//     ->name('products.show')
+//     ->where('id','[0-9]+');
+// //     // ->whereNumber('id');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get("/products/{product}", [ProductController::class, 'show'])
+    ->name('products.show');
+
+Route::get("/products/{product}/edit", [ProductController::class, 'edit'])
+    ->name('products.edit');
+
+Route::patch("/products/{product}", [ProductController::class, 'update'])
+    ->name('products.update');
+
+Route::delete('/products/{product}', [ProductController::class, 'destroy'])
+    ->name('products.destroy');
+
+
+// Route::controller(ProductController::class)
+// ->prefix('products')
+// ->name('products.')
+// ->group(function () {
+//     Route::get("/", 'index')
+//         ->name('index');
+
+//     Route::get("/create", 'create')
+//         ->name('create');
+
+//     Route::post("/store", 'store')
+//         ->name('store');
+
+//     Route::get("/{product}", 'show')
+//         ->name('show');
+
+//     Route::get("/{product}/edit", 'edit')
+//         ->name('edit');
+
+//     Route::patch("/{product}", 'update')
+//         ->name('update');
+
+//     Route::delete('/{product}', 'destroy')
+//         ->name('destroy');
+// });

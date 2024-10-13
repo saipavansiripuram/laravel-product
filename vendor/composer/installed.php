@@ -5,11 +5,20 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '7bb5d0b5c9d9a8dee1f3971f9143d3f4393647ec',
+        'reference' => '20772b92e83e129ba4149d1ea4bd9744cdb23902',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
+        'barryvdh/laravel-debugbar' => array(
+            'pretty_version' => 'v3.4.2',
+            'version' => '3.4.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../barryvdh/laravel-debugbar',
+            'aliases' => array(),
+            'reference' => '91ee8b3acf0d72a4937f4855bd245acbda9910ac',
+            'dev_requirement' => true,
+        ),
         'beyondcode/laravel-dump-server' => array(
             'pretty_version' => '1.3.0',
             'version' => '1.3.0.0',
@@ -346,7 +355,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '7bb5d0b5c9d9a8dee1f3971f9143d3f4393647ec',
+            'reference' => '20772b92e83e129ba4149d1ea4bd9744cdb23902',
             'dev_requirement' => false,
         ),
         'laravel/tinker' => array(
@@ -402,6 +411,15 @@
             'aliases' => array(),
             'reference' => '44bb1ab01811116f01fe216ab37d921dccc6c10d',
             'dev_requirement' => false,
+        ),
+        'maximebf/debugbar' => array(
+            'pretty_version' => 'v1.21.3',
+            'version' => '1.21.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../maximebf/debugbar',
+            'aliases' => array(),
+            'reference' => '0b407703b08ea0cf6ebc61e267cc96ff7000911b',
+            'dev_requirement' => true,
         ),
         'mockery/mockery' => array(
             'pretty_version' => '1.3.6',
